@@ -1,0 +1,249 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+  }
+
+  header
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+  }
+
+.logo a
+{
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-size: 2rem;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 10px;
+}
+
+
+  .menu-links 
+  {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 15px;
+  }
+
+  .menu-links a
+  {
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none;
+    
+  }
+
+  .menu-links li a:hover {
+    background-color: #ccc7d3;
+  }
+
+  /* nav menu button */
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: #111111;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  content: "";
+  position: absolute;
+}
+.menu-btn__lines::before {
+  transform: translateY(-0.5rem);
+}
+.menu-btn__lines::after {
+  transform: translateY(0.5rem);
+}
+/* animation */
+.menu-btn.open .menu-btn__lines {
+  transform: translateX(2rem);
+  background-color: transparent;
+}
+.menu-btn.open .menu-btn__lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  background-color: #ffffff;
+}
+.menu-btn.open .menu-btn__lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  background-color: #ffffff;
+}
+
+.section
+{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+ 
+}
+
+.hero-section
+{
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.hero-col {
+  padding: clamp(1rem, 8vw, 5rem);
+  max-width: 50%;
+}
+
+.section h1 {
+  font-family: "Titillium Web", serif;
+  font-size: clamp(0px, 8vw, 200px);
+  font-weight: 700;
+  line-height: 3vw;
+  color: #ccc7d3;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  font-size: clamp(18px, 2.5vw, 60px);
+  color: #5a4d70;
+  padding-left: 3rem;
+  text-transform: uppercase;
+}
+
+.section p {
+  color: #5a4d70;
+  padding-right: 1rem;
+}
+
+.hero-section img {
+  width: clamp(250px, 30vw, 500px);
+  transform: scaleX(-1);
+}
+
+.custom-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider .shape-fill {
+  fill: #ffffff;
+}
+
+/* another section */
+.another-col {
+  width: clamp(300px, 50vw, 600px);
+}
+
+@media screen and (max-width:1024px)
+{
+  .custom-shape-divider svg
+  {
+    width: calc(200% + 1.3px);
+    height: 150px;
+  }
+
+  .hero-col {
+    max-width: 100%;
+    width: clamp(300px, 50vw, 600px);
+    padding: 0;
+  }
+  .hero-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width:745px)
+{
+  .custom-shape-divider svg
+  {
+    width: calc(250% + 1.3px);
+    height: 150px;
+  }
+
+  .header a {
+    font-size: 1rem;
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu-links
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100vw);
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #5a4d70;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .menu-links.open
+  {
+    transform: translateX(0);
+  }
+
+  .menu-links li {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-links li a {
+    color: #ffffff;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .menu-links a:hover {
+    color: #111111;
+  }
+
+}
+

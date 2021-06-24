@@ -1,0 +1,70 @@
+.input-group input
+{
+width :100%;
+border : none;
+border-bottom: solid 4px #660B28;
+transition: 240ms ease;
+font-size: 12px;
+line-height: 15px;
+padding : 11px 8px 6px 8px;
+color : #ffffff;
+background-color: #881238;
+}
+
+input :focus
+{
+    outline: none;
+}
+
+.label-active
+{
+    top: 8px !important;
+    font-size: 8px !important;
+    line-height: 10px !important;
+    color: #ff8bbb;
+}
+
+input:active
+{
+    outline: none;
+}
+
+.input-group
+{
+    position: relative;
+    width: 260px;
+}
+
+.input-group input:focus
+{
+    border-bottom: solid 4px #ee4540;
+}
+
+.input-group label
+{
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    tranform:translateY(-50%);
+    font-size: 12px;
+    line-height: 15px;
+    pointer-events: none;
+    transition: 180ms;
+}
+
+
+
+
+.try
+{
+    outline-style: auto;
+    border-left-style: solid;
+    
+    margin-top: 10%;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 3px 6px red;
+    background-color: #ff8bbb;
+    font: italic 20px Georgia, serif
+    
+}

@@ -1,0 +1,92 @@
+*
+{
+    padding : 0;
+    margin : 0;
+    background-color: #e3edf7;
+}
+
+h1
+{
+
+
+font-family: sans-serif;
+font-weight: normal;
+font-size: 25px;
+letter-spacing: 4px;
+padding: 200px 0 100px;
+color: #555; 
+text-align: center;
+
+}
+
+.social-media
+{
+     display: flex;
+     justify-content: center;
+    
+}
+
+a{
+    display: flex;
+    background-color: #e3edf7;
+    height: 75px;
+    width:75px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255,0.7);
+    transition: transform 0.5s;
+}
+ a i
+{
+    font-size: 35px;
+    color:#777;
+    transition: transform 0.5s;
+   
+}
+a:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255,0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05);
+    border:1px solid rgba(0,0,0,0,.1);
+    transform: translateY(15px);
+}
+
+.aBox
+{
+    
+    position: relative;
+    top:50px;         
+    left: 50%;                                                                                                                                                                                                                                       
+    width: 205px;
+    height: 205px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-shadow:  inset 6px 6px 8px  rgba(0,0,0,0.3),
+            inset 3px 3px 8px rgba(0,0,0,0.3);
+}
+
+.social-media a:hover
+{
+    transform: scale(0.9);
+  
+}
+
+
+a:hover .fa-facebook{
+    color: blue;
+}
+
+a:hover .fa-twitter{
+    color: rgb(25, 25, 110);
+}
+
+a:hover .fa-instagram{
+    color: #f14843;
+}

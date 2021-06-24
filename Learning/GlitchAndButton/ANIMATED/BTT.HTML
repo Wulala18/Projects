@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./BTT.CSS">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="hero">
+
+
+    <button id="ddd">
+        <p id="texxt">Submit</p>
+<div class="check-box">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+     </svg>
+    </div>
+    </button>
+
+
+    <script>
+
+        let btt = document.getElementById("ddd");
+        let text = document.getElementById("texxt")
+
+        btt.onclick = function() {
+            text.innerHTML = "Welcome"
+            btt.classList.add("active");
+        }
+
+
+    </script>
+</div>
+</body>
+</html>

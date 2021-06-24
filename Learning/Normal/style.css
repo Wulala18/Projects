@@ -1,0 +1,73 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  img
+  {
+      width: 100%;
+      vertical-align: middle;
+    
+  }
+  
+  h1,
+  h2 {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  
+  
+  header {
+    text-align: center;
+    padding: 3em 0;
+  }
+  
+  .page-title {
+    font-size: 6rem;
+    color: #353a47;
+  }
+  
+  .page-subtitle {
+    color: #84b082;
+    font-weight: 700;
+    font-size: 2.125rem;
+  }
+  
+  
+  main * + * {
+    margin-top: 1em;
+  }
+  
+  
+  .dark-bg {
+    background: #353a47;
+    color: white;
+    padding: 2em;
+  }
+  
+  .container {
+    padding: 0 2em;
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  
+  .card {
+    max-width: 25em;
+    background: #333;
+    color: #fff;
+    display: flex;
+  }
+  
+  .card-content {
+    padding: 1em;
+  }
+  

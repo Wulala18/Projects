@@ -1,0 +1,68 @@
+*
+{
+    box-sizing: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+
+box-sizing: inherit;
+
+}
+
+.box
+{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    padding: 10px;
+}
+.box1
+{
+    background: cyan;
+}
+.box2
+{
+    background: blue;
+}
+.box3
+{
+    background: purple;
+}
+.box4
+{
+    background: black;
+}
+.box5
+{
+    background: red;
+}
+.box6
+{
+    background: orange;
+}
+.box7
+{
+    background: grey;
+}
+.box8
+{
+    background: green;
+}
+.box9
+{
+    background: greenyellow;
+}
+
+.container
+{
+    display: flex;
+    border: 10px solid goldenrod;
+    min-height: 100vh;
+    flex-wrap: wrap;    
+}
+.box
+{
+    width: calc(33% - 20px);
+    padding: 10px;
+}

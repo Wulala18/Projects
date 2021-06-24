@@ -1,0 +1,30 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+
+.s-img
+{
+
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    cursor: pointer
+    transition= width 250ms ease,height 250ms ease;
+
+}
+
+.s-img:hover
+{
+
+    width:220px;
+    height: 220px;
+
+}
+
+.s-img:active
+{
+    width:100px;
+    height: 100px;
+}

@@ -1,0 +1,117 @@
+
+$colors :
+(
+
+    primary: white,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    accent: #FFF6BB
+
+);
+
+@function colorpaint($mycolor)
+{
+    @return map-get($colors, $mycolor )
+}
+
+
+*,
+*::before,
+*::after
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+a{
+    font-size: 100px;
+    text-decoration: none;
+    color: colorpaint(primary);
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+    
+    
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),url(/img/background.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.container
+{
+position: absolute;
+display: flex;
+justify-content: space-around;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+
+
+.cards
+{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats" ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 18px;
+    background: colorpaint(primary);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+    margin-right: 50px;
+}
+
+.cardimage
+{
+    grid-area: image;
+    background: url(/img/img1.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.cardinfo
+{
+    grid-area: text;
+    margin: 25px;
+
+   span
+    {
+        color: rgba(255,7,100);
+        font-size: 13px;
+    }
+
+    h2
+    {
+        margin-top: 0px;
+        font-size:28px
+    }
+}
+
+.card-stats
+{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: orange;
+}
+
+
+
+}
+
+
